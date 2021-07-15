@@ -17,7 +17,7 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  max-width: 1300px;
+  max-width: 2200px;
   margin: 0 auto;
 }
 
@@ -420,7 +420,8 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  min-width: 375px;
+  max-width: 100%;
 }
 .hero-content::after {
   content: "";
@@ -439,9 +440,10 @@ input[data-error]::after {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
+  max-width: 100%;
 }
 .hero-text {
-  width: 146%;
+  width: 100%;
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
@@ -482,11 +484,13 @@ footer {
   .hero-section {
     display: block;
     box-shadow: unset;
+    max-width: 100%;
   }
   .hero-content {
     background: #fff;
     color: #000;
     padding: 20px;
+    max-width: 100%;
   }
   .hero-content::after {
     content: unset;
@@ -495,11 +499,13 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 3.3rem;
     white-space: normal;
+    width: 80vw;
+    overflow: initial;
   }
   .hero-text {
-    width: unset;
+    width: 80vw;
     font-size: 1.5rem;
   }
   .hero-img img {
