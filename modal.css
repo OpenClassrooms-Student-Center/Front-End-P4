@@ -486,6 +486,9 @@ footer {
     box-shadow: unset;
     max-width: 100%;
   }
+  .hero-body{
+    height: 100vh;
+  }
   .hero-content {
     background: #fff;
     color: #000;

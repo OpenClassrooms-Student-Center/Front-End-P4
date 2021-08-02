@@ -36,11 +36,7 @@ form.reset();
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-/*
-form.addEventListener('onsubmit', ($event) => {
-  console.log('entered form listening event');
-  $event.preventDefault();
-})*/
+
 
 // launch modal form
 function launchModal() {
@@ -207,7 +203,6 @@ submit.addEventListener('click', () => {
     document.querySelector('#locationQuestion').style.fontSize = '3rem';
     document.querySelector('#locationQuestion').style.textAllign = "center";
     submit.value = 'Close';
-    //submit.preventDefault();
     
     registered = true;
     
@@ -231,4 +226,4 @@ function moveAhead(){
 }
 
 console.log('Rounds through the whole code' + roundsThrough);
-a++;
+roundsThrough++;
