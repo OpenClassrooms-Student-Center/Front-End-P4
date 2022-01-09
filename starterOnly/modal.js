@@ -21,3 +21,10 @@ function launchModal() {
 }
 
 
+//Close window
+function closeWindow() {
+
+  if (modalbg.style.display === "block") {
+    return modalbg.style.display = "none"
+  }
+}
