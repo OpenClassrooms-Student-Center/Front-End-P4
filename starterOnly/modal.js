@@ -27,3 +27,26 @@ function closeWindow() {
   }
 }
 
+const firstName = document.getElementById("first"),
+  lastName = document.getElementById("last"),
+  email = document.getElementById("email"),
+  birthdate = document.getElementById("birthdate"),
+  quantity = document.getElementById("quantity"),
+  country = document.getElementsByClassName("location"),
+  agreeToTerms = document.getElementById("checkbox1"),
+  form = document.getElementById("form"),
+  submit = document.getElementById("submit"),
+  errorMsg = document.getElementsByClassName("error");
+
+
+// Form Variables
+const firstName = document.getElementById("first"),
+  lastName = document.getElementById("last"),
+  email = document.getElementById("email"),
+  birthdate = document.getElementById("birthdate"),
+  quantity = document.getElementById("quantity"),
+  country = document.getElementsByClassName("location"),
+  agreeToTerms = document.getElementById("checkbox1"),
+  form = document.getElementById("form"),
+  submit = document.getElementById("submit"),
+  errorMsg = document.getElementsByClassName("error");
