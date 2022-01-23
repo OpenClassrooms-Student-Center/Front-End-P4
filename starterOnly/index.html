@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
@@ -33,7 +34,7 @@
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
-            US Nationwide <br>
+            US Nationwide
             Game-a-Thon
           </h1>
           <p class="hero-text">
@@ -54,77 +55,81 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close" onclick="closeWindow()"></span>
           <div class="modal-body">
             <form
               name="reserve"
               action="index.html"
               method="get"
-              id="form"
               onsubmit="return validate();"
+              id="form"
             >
               <div
                 class="formData">
-                <label>First Name</label><br>
+                <label for="first">First Name</label>
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
                   minlength="2"
-                /><br>
+                /><div class="error"></div>
               </div>
               <div
                 class="formData">
-                <label>Last Name</label><br>
+                <label for="last">Last Name</label>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                /><div class="error"></div>
               </div>
               <div
                 class="formData">
-                <label>Email</label><br>
+                <label for="email">Email</label>
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                /><div class="error"></div>
               </div>
               <div
                 class="formData">
-                <label>Birthdate</label><br>
+                <label for="birthdate">Birthdate</label>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                /><div class="error"></div>
               </div>
               <div
                 class="formData">
-                <label>How many tournaments have you attended? </label><br>
+                <label for="quantity">How many tournaments have you attended? </label>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <div class="error"></div>
               </div>
               <p class="text-label">Where do you want to participate this year?</p>
               <div
                 class="formData">
+                <div class="error"></div>
+
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location1"
                   name="location"
                   value="New York"
+                  required
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
                   New York</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location2"
                   name="location"
@@ -135,7 +140,7 @@
                   San Francisco</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location3"
                   name="location"
@@ -146,7 +151,7 @@
                   Seattle</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location4"
                   name="location"
@@ -157,7 +162,7 @@
                   Chicago</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location5"
                   name="location"
@@ -168,7 +173,7 @@
                   Boston</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input location"
                   type="radio"
                   id="location6"
                   name="location"
@@ -191,22 +196,28 @@
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
+                <div class="error"></div>
                 </label>
-                <br>
+                
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Please sign me up to be notified about future events.
                 </label>
-                <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
+                id="submit"
                 value="Go"
+                onclick="validate(event)"
               />
             </form>
+            <button
+                class="btn-submit button"
+                id="close-btn"
+                onclick="closeWindow()"
+              >Close</button>
           </div>
         </div>
       </div>
