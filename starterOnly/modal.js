@@ -113,3 +113,21 @@ const termsAgreement = (serial, message) => {
   errorMsg[serial].innerHTML = agreeToTerms.checked ? "" : message;
   verification.Terms = agreeToTerms.checked ? true : false;
 };
+
+const validate = (e) => {
+  e.preventDefault();
+
+
+  if (
+    verification.FirstName === true &&
+    verification.LastName === true &&
+    verification.Email === true &&
+    verification.BirthDate === true &&
+    verification.Quantity === true &&
+    verification.Location === true &&
+    verification.Terms === true
+  ) {
+    console.log("Success")
+  }
+  return;
+};
