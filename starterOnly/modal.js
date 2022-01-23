@@ -117,6 +117,14 @@ const termsAgreement = (serial, message) => {
 const validate = (e) => {
   e.preventDefault();
 
+  checkFirstName(firstName, 0, "Please enter 2+ characters for name field.");
+  checkLastName(lastName, 1, "Please enter 2+ characters for name field.");
+  checkEmail(email, 2, "Please add a correct email address.");
+  checkBirth(birthdate, 3, "You must enter your date of birth.");
+  checkQuantity(quantity, 4, "Please add a quantity");
+  checkLocation(5, "You must choose one option.");
+  termsAgreement(6, "You must check to agree to terms and conditions.");
+
 
   if (
     verification.FirstName === true &&
