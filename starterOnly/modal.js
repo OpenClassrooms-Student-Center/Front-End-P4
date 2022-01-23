@@ -20,4 +20,9 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
-
+//Close window
+function closeWindow() {
+  if (modalbg.style.display === "block") {
+    return (modalbg.style.display = "none");
+  }
+}
