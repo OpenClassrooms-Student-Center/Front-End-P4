@@ -39,7 +39,17 @@ const firstName = document.getElementById("first"),
   submit = document.getElementById("submit"),
   errorMsg = document.getElementsByClassName("error");
 
-  // ---------------- Form Validation ----------------
+  let verification = {
+    FirstName: false,
+    LastName: false,
+    Email: false,
+    BirthDate: false,
+    Quantity: false,
+    Location: false,
+    Terms: false,
+  };
+
+// ---------------- Form Validation ----------------
 
 // ---- First Name Validation
 const checkFirstName = (id, serial, message) => {
